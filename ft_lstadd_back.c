@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etakaham <kakigoori00007@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 19:19:53 by etakaham          #+#    #+#             */
-/*   Updated: 2023/07/06 15:53:24 by etakaham         ###   ########.fr       */
+/*   Created: 2023/07/05 19:19:35 by etakaham          #+#    #+#             */
+/*   Updated: 2023/07/06 16:42:51 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*new_lst;
+	size_t	i;
 
-	return (new_lst);
+	i = 0;
+	while (lst[i]->next == NULL)
+		i++;
+	lst[i]->next = new;
+	new->next = NULL;
 }

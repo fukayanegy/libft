@@ -6,7 +6,7 @@
 /*   By: etakaham <kakigoori00007@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 19:19:44 by etakaham          #+#    #+#             */
-/*   Updated: 2023/07/06 15:52:07 by etakaham         ###   ########.fr       */
+/*   Updated: 2023/07/06 16:43:13 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
+	
 	return ;
 }

@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etakaham <kakigoori00007@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 19:19:55 by etakaham          #+#    #+#             */
-/*   Updated: 2023/07/06 15:43:51 by etakaham         ###   ########.fr       */
+/*   Created: 2023/07/05 19:19:39 by etakaham          #+#    #+#             */
+/*   Updated: 2023/07/06 16:36:32 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int	size;
-
-	size = 0;
-	return (size);
+	new->next = *lst;
+	return ;
 }
