@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etakaham <kakigoori00007@gmail.com>        +#+  +:+       +#+        */
+/*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 19:19:44 by etakaham          #+#    #+#             */
-/*   Updated: 2023/07/06 16:43:13 by etakaham         ###   ########.fr       */
+/*   Updated: 2023/07/06 17:36:39 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	
-	return ;
+	del(lst->content);
+	free(lst);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etakaham <kakigoori00007@gmail.com>        +#+  +:+       +#+        */
+/*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 19:19:42 by etakaham          #+#    #+#             */
-/*   Updated: 2023/07/06 15:54:47 by etakaham         ###   ########.fr       */
+/*   Created: 2023/07/06 17:28:29 by etakaham          #+#    #+#             */
+/*   Updated: 2023/07/06 17:39:52 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	return ;
+	t_list	*clear_target;
+
+	while (*lst != NULL)
+	{
+		clear_target = *lst;
+		*lst = (*lst)->next;
+		ft_lstdelone(clear_target, del);
+	}
 }
